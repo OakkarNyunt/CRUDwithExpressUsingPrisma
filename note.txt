@@ -5,6 +5,9 @@ npm i --save-dev @types/cors
 npm i cors
 npm i navigate
 npm install dotenv --save
+npm install express cors dotenv @prisma/client
+npm install --save-dev @types/express @types/node @types/cors
+
 
 dotenv usage
 ------------
