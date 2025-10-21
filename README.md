@@ -33,6 +33,7 @@ PORT=4000
  npx prisma migrate dev --name init
 ```
 
-```npm run dev
+```
+npm run dev
 
 ```
