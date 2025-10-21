@@ -17,10 +17,6 @@ npm install
 ```
 
 ```
-npm run dev
-```
-
-```
 npx prisma generate
 ```
 
