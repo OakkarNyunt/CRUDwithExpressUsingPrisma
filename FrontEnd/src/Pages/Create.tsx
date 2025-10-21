@@ -49,7 +49,7 @@ export default function Create() {
 
     try {
       // Data Fetching using API
-      await axios.post("http://localhost:3000/create", {
+      await axios.post("http://localhost:4000/create", {
         name: form.name,
         price: Number(form.price),
         stock: Number(form.stock),

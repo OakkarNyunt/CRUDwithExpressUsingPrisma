@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Route path="/" Component={Home} />
         <Route path="/create" Component={Create} />
-        <Route path="/update" Component={Update} />
+        <Route path="/update/:id" Component={Update} />
       </Router>
       <Toaster position="top-right" />
     </BrowserRouter>

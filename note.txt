@@ -1,5 +1,15 @@
+dependencies
+-----------------
 npm i --save-dev @types/cors
 npm i cors
 npm i navigate
 
+dotenv usage
+------------
 npm install dotenv --save
+
+import dotenv from 'dotenv'
+dotenv.config()    // must be at very top
+
+console.log(process.env.PORT)      // 5000
+console.log(process.env.DB_PASS)   // secret123
