@@ -1,13 +1,18 @@
-import express from "express";
-import { PrismaClient } from "@prisma/client";
-import cors from "cors";
-import dotenv from "dotenv";
-import { log } from "console";
-const app = express();
-const prisma = new PrismaClient();
-app.use(cors({ origin: "http://localhost:8484" }));
-app.use(express.json());
-dotenv.config();
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const client_1 = require("@prisma/client");
+const cors_1 = __importDefault(require("cors"));
+const dotenv_1 = __importDefault(require("dotenv"));
+const console_1 = require("console");
+const app = (0, express_1.default)();
+const prisma = new client_1.PrismaClient();
+app.use((0, cors_1.default)({ origin: "http://localhost:8484" }));
+app.use(express_1.default.json());
+dotenv_1.default.config();
 const port = process.env.PORT || 4000;
 //Port
 app.listen(port, () => {
@@ -54,7 +59,7 @@ app.delete("/product/:id", async (req, res) => {
         res.status(200).json("deleted Successfully");
     }
     catch (e) {
-        log(e + "cannot delete user");
+        (0, console_1.log)(e + "cannot delete user");
     }
 });
 //get update product using id
@@ -77,7 +82,6 @@ app.put("/update/:id", async (req, res) => {
         res.status(200).json("updated successfully");
     }
     catch (error) {
-        log(error + "cannot update user");
+        (0, console_1.log)(error + "cannot update user");
     }
 });
-//# sourceMappingURL=index.js.map
