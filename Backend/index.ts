@@ -12,6 +12,13 @@ dotenv.config();
 
 const port = process.env.PORT || 4000;
 
+//Port
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
+
+//Home Page
+
 app.get("/", (req, res) => {
   res.send("Hello Express ");
 });
@@ -78,8 +85,4 @@ app.put("/update/:id", async (req, res) => {
   } catch (error) {
     log(error + "cannot update user");
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
 });
